@@ -13,8 +13,8 @@ class DateFunction
         
     public:
         DateFunction();
-        string monthToString(int month);
-        string dayOfWeekToString(int dayOfWeek);
+        string monthToString();
+        string dayOfWeekToString();
         int dayCap(int month);
         bool isLeapYear(int year);
 
