@@ -7,9 +7,10 @@ class DateFunction
 {
     private:
         int dayOfWeek;
+        int day;
         int month;
         int year;
-        int day;
+        
     public:
         DateFunction();
         string monthToString(int month);
