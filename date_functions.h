@@ -15,8 +15,8 @@ class DateFunction
         DateFunction();
         string monthToString();
         string dayOfWeekToString();
-        int dayCap(int month);
-        bool isLeapYear(int year);
+        int dayCap();
+        bool isLeapYear();
 
 
 
