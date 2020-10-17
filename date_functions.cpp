@@ -15,7 +15,7 @@ int DateFunction::dayCap()
     {
         case 2:
         {
-            if(isLeapYear())
+            if(isLeapYear(year))
                 return 29;
             else
                 return 28;    
