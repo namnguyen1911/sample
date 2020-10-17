@@ -35,7 +35,7 @@ void date_functions::print_consecutive_dates(int num, int delay_ms){
     }
 }
 
-bool date_functions:: isLeapYear( int year)
+bool date_functions:: is_leap_year( int year)
 {
     if( year % 4 == 0 && year % 100 != 0 || year % 400 == 0) return true;
     return false;
