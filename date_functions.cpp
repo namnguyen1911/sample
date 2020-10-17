@@ -47,7 +47,7 @@ int date_functions::dayCap()
     {
         case 2:
         {
-            if(isLeapYear(year))
+            if(is_leap_year(year))
                 return 29;
             else
                 return 28;    
