@@ -1,15 +1,47 @@
 #include "date_functions.h"
+#include <iostream>
 
-DateFunction::DateFunction(): day(1), dayOfWeek(1), month(1), year(2000) 
-{}
+using namespace std;
 
-bool DateFunction:: isLeapYear( int year)
+date_functions::date_functions() {
+    day = 0;
+    dayOfWeek = 0;
+    month = 1;
+    year = 2000;
+}
+
+void date_functions::print_consecutive_dates(int num, int delay_ms){
+    int const month_Cap = 12;
+    int day_Cap = dayCap();
+
+    cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year;
+
+    for (;num > 0; num--){
+        if((month_Cap - month) != 0){
+            if((day_Cap - day) != 0){
+                dayOfWeek++;
+                day++;
+                cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year;
+            }
+            else{
+                day = 1;
+                month++;
+            }
+        }
+        else{
+            month = 1;
+            year++;
+        }
+    }
+}
+
+bool date_functions:: isLeapYear( int year)
 {
     if( year % 4 == 0 && year % 100 != 0 || year % 400 == 0) return true;
     return false;
 }
 
-int DateFunction::dayCap()
+int date_functions::dayCap()
 {
     switch(month)
     {
@@ -28,7 +60,7 @@ int DateFunction::dayCap()
 
 }
 
-string DateFunction::monthToString(){
+string date_functions::monthToString(){
     switch(month){
         case 1: return "Jannuary"; break;
         case 2: return "February"; break;
@@ -46,7 +78,7 @@ string DateFunction::monthToString(){
     }
 }
 
-string DateFunction::dayOfWeekToString(){
+string date_functions::dayOfWeekToString(){
     int DoW = dayOfWeek % 7;
     switch (DoW){
         case 1: return "Sunday"; break;
@@ -56,6 +88,7 @@ string DateFunction::dayOfWeekToString(){
         case 5: return "Thursday"; break;
         case 6: return "Friday"; break;
         case 0: return "Saturday"; break;
+        default: return "Dnvalid Day of Week"; break;
     }
 }
 

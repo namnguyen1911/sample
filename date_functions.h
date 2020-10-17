@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class DateFunction
+class date_functions
 {
     private:
         int dayOfWeek;
@@ -12,7 +12,7 @@ class DateFunction
         int year;
         
     public:
-        DateFunction();
+        date_functions();
         string monthToString();
         string dayOfWeekToString();
         int dayCap();
