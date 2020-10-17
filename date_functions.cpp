@@ -14,14 +14,14 @@ void date_functions::print_consecutive_dates(int num, int delay_ms){
     int const month_Cap = 12;
     int day_Cap = dayCap();
 
-    cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year;
+    cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year << endl;
 
     for (;num > 0; num--){
         if((month_Cap - month) != 0){
             if((day_Cap - day) != 0){
                 dayOfWeek++;
                 day++;
-                cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year;
+                cout << dayOfWeekToString() << ", " << monthToString() << " " << day << ", " << year << endl;
             }
             else{
                 day = 1;
