@@ -17,7 +17,7 @@ class DateFunction
         string monthToString();
         string dayOfWeekToString();
         int dayCap();
-        bool isLeapYear( int year);
+        bool is_leap_year( int year);
         void print_consecutive_dates(int num, int delay_ms);
 
 

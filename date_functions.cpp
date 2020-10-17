@@ -3,7 +3,7 @@
 DateFunction::DateFunction(): day(1), dayOfWeek(1), month(1), year(2000) 
 {}
 
-bool DateFunction:: isLeapYear( int year)
+bool DateFunction:: is_leap_year( int year)
 {
     if( year % 4 == 0 && year % 100 != 0 || year % 400 == 0) return true;
     return false;
@@ -15,7 +15,7 @@ int DateFunction::dayCap()
     {
         case 2:
         {
-            if(isLeapYear(year))
+            if(is_leap_year(year))
                 return 29;
             else
                 return 28;    
