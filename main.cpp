@@ -1,11 +1,9 @@
 #include "date_functions.h"
-#include <iostream>
 
-using namespace std;
-
-int main(){
-    
-
-    system("pause");
+int main()
+{
+    DateFunction test;
+    test.print_consecutive_dates(370, 1000);
     return 0;
+
 }
